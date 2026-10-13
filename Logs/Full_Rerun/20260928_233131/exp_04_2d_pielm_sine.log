@@ -1,0 +1,4 @@
+PIELM | N_f=1024 | N_b=1024 | N*=2048
+Training time: 1.3017 seconds
+Relative L2 Error: 7.189e-04
+[LOG] Αποθηκεύτηκε: exp_04_pielm_sine | L2=7.1894e-04

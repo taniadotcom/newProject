@@ -1,0 +1,13 @@
+﻿experiment,method,run,relative_L2,training_solve_sec,alpha,evaluation
+exp_01,PINN 2D sine,Results/exp_01_2d_sine/run_001,0.0013470470878969888,975.8653359413147,,Results/exp_01_2d_sine/run_001
+exp_02,PINN 2D Gaussian,Results/exp_02_2d_gauss/run_001,0.0001841372997221101,849.6881487369537,,Results/exp_02_2d_gauss/run_001
+exp_03,Αντίστροφο πρόβλημα,Results/exp_03_inverse/run_001,0.014935025817260746,,0.997280478477478,Results/inference_02/run_001
+exp_04,PIELM 2D sine,Results/exp_04_pielm_sine/run_001,0.0007189405185575278,1.3016819953918457,,Results/exp_04_pielm_sine/run_001
+exp_05,PIELM 2D Gaussian,Results/exp_05_pielm_gauss/run_001,0.00005776374592776597,1.5060157775878906,,Results/exp_05_pielm_gauss/run_001
+exp_06,Adaptive Gaussian,Results/exp_06_gauss_adaptive/run_001,0.0034655323453691564,3243.5295855998993,,Results/exp_06_gauss_adaptive/run_001
+exp_07,PINN 3D sine,Results/exp_07_3d_sine/run_001,0.031235151721274553,3876.4052698612213,,Results/exp_07_3d_sine/run_001
+exp_08,PIELM 3D sine,Results/exp_08_3d_pielm_sine/run_001,0.027868708493138744,7.338841676712036,,Results/exp_08_3d_pielm_sine/run_001
+exp_09,PINN 3D Delaunay,Results/exp_09_3d_delaunay/run_001,0.03608340485972917,2040.25976729393,,Results/exp_09_3d_delaunay/run_001
+exp_10,PINN / sobol,Results/exp_10_3d_pinn_vs_pielm/run_002,0.03664518900364219,1047.5525135000062,,Results/exp_10_3d_pinn_vs_pielm/run_002
+exp_10,PIELM / sobol,Results/exp_10_3d_pinn_vs_pielm/run_002,0.02853607741224078,7.274278700002469,,Results/exp_10_3d_pinn_vs_pielm/run_002
+exp_10,PINN / delaunay,Results/exp_10_3d_pinn_vs_pielm/run_002,0.03604205191873821,1086.162307599996,,Results/exp_10_3d_pinn_vs_pielm/run_002
