@@ -1,4 +1,0 @@
-PIELM 3D | N_f=2048 | N_b_per_face=256 | N*=3584
-Training time: 7.3388 seconds
-Relative L2 Error: 2.787e-02
-[LOG] Αποθηκεύτηκε: exp_08_3d_pielm_sine | L2=2.7869e-02

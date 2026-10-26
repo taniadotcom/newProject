@@ -1,9 +1,0 @@
-date,exp_id,problem,method,sigma,n_points,epochs,L2_error,time_sec,notes
-28-09-26 23:53,exp_01_2d_sine,sine,halton,,10000,20000,1.35E-03,975.9,
-29-09-26 0:07,exp_02_2d_gauss,gauss,sobol,0.5,8192,20000,1.84E-04,849.7,rhs=-laplacian
-29-09-26 0:13,exp_04_pielm_sine,sine,PIELM-sobol,,2048,0,7.19E-04,1.3,"scale=pi, seed=42, N_f=1024, N_b=1024"
-29-09-26 0:13,exp_05_pielm_gauss,gauss,PIELM-sobol,0.5,2048,0,5.78E-05,1.5,"scale=1/sigma=2.0, seed=42, N_f=1024, N_b=1024, rhs=-laplacian"
-29-09-26 1:08,exp_06_gauss_adaptive,gauss,adaptive-sobol,0.5,10496,20000,3.47E-03,3243.5,"adapt_every=2000, adapt_n_new=256, rhs=-laplacian"
-29-09-26 2:12,exp_07_3d_sine,sine_3d,sobol,,8192,20000,3.12E-02,3876.4,"3D sine, f=3pi^2*sin*sin*sin, 6 faces boundary"
-29-09-26 2:12,exp_08_3d_pielm_sine,sine_3d,PIELM-sobol,,3584,0,2.79E-02,7.3,"3D PIELM, scale=pi, seed=42, N_f=2048, N_b=1536"
-29-09-26 2:47,exp_09_3d_delaunay,sine_3d,delaunay,,4096,20000,3.61E-02,2040.3,"3D sine, f=3pi^2*sin*sin*sin, 6 faces boundary"

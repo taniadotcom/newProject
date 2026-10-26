@@ -1,4 +1,0 @@
-PIELM Gauss | σ=0.5 | N_f=1024 | N_b=1024 | N*=2048
-Training time: 1.5060 seconds
-Relative L2 Error: 5.776e-05
-[LOG] Αποθηκεύτηκε: exp_05_pielm_gauss | L2=5.7764e-05
