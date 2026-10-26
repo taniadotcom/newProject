@@ -1,0 +1,15 @@
+# Εικονικό περιβάλλον Python
+.venv/
+
+# Προσωρινά αρχεία Python
+__pycache__/
+*.pyc
+
+# Δοκιμαστικές εκτελέσεις (--smoke)
+Results/**/smoke_*/
+
+# Αρχεία συστήματος και editor
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,64 @@
+{
+  "status": "completed",
+  "kind": "run",
+  "seed": 42,
+  "device": "cpu",
+  "threads": 2,
+  "python": "3.12.2",
+  "torch": "2.4.1+cpu",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "matplotlib": "3.10.1",
+  "problem": "2D sine Poisson",
+  "dimension": 2,
+  "dtype": "torch.float64",
+  "N_f": 512,
+  "N_b_per_face": 64,
+  "N_b_total": 256,
+  "N_interface": 64,
+  "N_star_total": 512,
+  "boundary_seed": 43,
+  "interface_seed": 44,
+  "subdomains": [
+    [
+      [
+        0,
+        0.5
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0.5,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "coordinate_map": "local coordinates (X-lower)/width; derivatives include inverse widths",
+  "interfaces": "u_left=u_right and dx_u_left=dx_u_right; all rows weight 1",
+  "driver": "gelsd",
+  "rcond": "torch default",
+  "scale": 3.141592653589793,
+  "comparison": "Same interior/boundary/evaluation points and total basis count; DPIELM adds interface rows.",
+  "reference": "Dwivedi and Srinivasan (2020), section 6, equations 68-75; two-domain 2D Poisson adaptation.",
+  "timing": "H/K assembly and least squares; excludes sampling/evaluation/IO",
+  "X_f_sha256": "e5bc86a1070ea57ee1f7b12e981f5033e4455b5f5c3d9b4c79157abc5ecca77b",
+  "X_b_sha256": "5f9eb7786682572028a2f7db6780b887e9a1552bc36fc443f248bc516cc1596d",
+  "shared_points_verified": true,
+  "N_f_subdomains": [
+    256,
+    256
+  ],
+  "H_shape": [
+    896,
+    512
+  ],
+  "matrix_residual_rms": 2.4511655330974836e-07
+}

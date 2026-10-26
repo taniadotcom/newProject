@@ -1,0 +1,2 @@
+method,relative_L2,global_relative_L2,test_MSE,time_sec,inference_time_sec,inference_per_sample_sec,epochs,n_test,best_epoch
+CNN,0.314961766352033,0.34936886616853047,0.10655183345079422,25.84548379998887,0.011870199989061803,0.00018547187482909067,100,64,91

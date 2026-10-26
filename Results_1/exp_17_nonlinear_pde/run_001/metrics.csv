@@ -1,2 +1,0 @@
-method,relative_L2,time_sec,epochs,N_f,N_b
-PINN,0.131499425239965,31.209733300027438,3000,512,256

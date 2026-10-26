@@ -1,0 +1,81 @@
+{
+  "status": "completed",
+  "kind": "run",
+  "dimension": 4,
+  "selection": {
+    "method": "PIELM",
+    "sampling": "sobol",
+    "clear_winner": false,
+    "criterion": "Minimize worst relative error ratio to the best method on each problem; runtime breaks exact ties.",
+    "scores": {
+      "PIELM/sobol": 1.1300743987440272,
+      "PINN/delaunay": 1.2630345579059048,
+      "PINN/sobol": 1.2841705071883125
+    },
+    "interpretation": "Trade-off or differing problem rankings. Accuracy-based extension choice, not general superiority.",
+    "stability": "One seed per problem. Finite outputs and numerical rank do not establish statistical stability.",
+    "kind": "run",
+    "usable_for_full_extension": true,
+    "sources": {
+      "smooth": "Results/exp_10_3d_pinn_vs_pielm/run_002",
+      "nonsmooth": "Results/exp_11_3d_nonsmooth_pinn_vs_pielm/run_001"
+    }
+  },
+  "selection_source": "Results/exp_12_compare_smooth_nonsmooth/run_001",
+  "dtype": "torch.float32",
+  "seed": 42,
+  "boundary_seed": 43,
+  "evaluation_seed": 2026,
+  "N_eval": 16384,
+  "device": "cpu",
+  "threads": 2,
+  "memory_plan": {
+    "H_shape": [
+      4096,
+      4096
+    ],
+    "H_MiB": 64.0,
+    "estimated_peak_extra_MiB": 320.0,
+    "available_MiB": 823.28125,
+    "safe": true,
+    "estimate_note": "Block construction: 4*H + 64 MiB reserve. Heuristic, not a measured peak. Keep 25% of free RAM unused."
+  },
+  "PDE": "-Delta u = dim*pi^2*prod(sin(pi*X))",
+  "boundary_values": 0,
+  "activation": "tanh",
+  "python": "3.12.2",
+  "torch": "2.4.1+cpu",
+  "numpy": "2.4.4",
+  "timing": "training_time excludes sampling/evaluation/IO; evaluation_time measures prediction only",
+  "sampling_time": 0.03132869998808019,
+  "X_f_sha256": "8917bc0b1dfd3c366adb809077f9f79384c0ca8eee57dcda001e3877430d69ed",
+  "X_b_sha256": "6be73526628afa07d2a5f4b1f78f44954557d64e0747c29941723331394324e3",
+  "metrics": {
+    "dimension": 4,
+    "method": "PIELM",
+    "sampling": "sobol",
+    "N_f": 2048,
+    "N_b_per_face": 256,
+    "N_b_total": 2048,
+    "epochs": 0,
+    "N_star": 4096,
+    "relative_L2": 0.07814616335496385,
+    "training_time": 11.98777139998856,
+    "evaluation_time": 0.12053099999320693,
+    "seed": 42
+  },
+  "rank": 2017,
+  "X_eval_sha256": "564cd7a202ce3b5fde1ec6cd52e3f594704de04027e651609ddd61bae2d13cb4",
+  "points_unchanged": true,
+  "scaling_sources": {
+    "4": "run_001"
+  },
+  "method": "PIELM",
+  "sampling": "sobol",
+  "PIELM": {
+    "N_star": 4096,
+    "scale": 3.141592653589793,
+    "driver": "gelsd",
+    "rcond": "torch default"
+  }
+}

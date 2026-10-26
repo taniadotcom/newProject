@@ -1,2 +1,0 @@
-dimension,method,sampling,N_f,N_b_per_face,N_b_total,epochs,N_star,relative_L2,training_time,evaluation_time,seed
-5,PIELM,sobol,2048,256,2560,0,4608,0.13740615749627977,16.117321800003992,0.10666549997404218,42

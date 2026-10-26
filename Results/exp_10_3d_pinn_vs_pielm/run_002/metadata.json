@@ -1,0 +1,84 @@
+{
+  "status": "completed",
+  "kind": "run",
+  "seed": 42,
+  "boundary_seed": 43,
+  "N_f": 2048,
+  "N_b_per_face": 256,
+  "N_b_total": 1536,
+  "N_total": 3584,
+  "sampling": "sobol",
+  "boundary_sampling": "sobol",
+  "dtype": "torch.float32",
+  "domain": "[0,1]^3",
+  "PDE": "-Delta u = 3*pi^2*sin(pi*x)*sin(pi*y)*sin(pi*z)",
+  "solution": "sin(pi*x)*sin(pi*y)*sin(pi*z)",
+  "boundary_values": 0,
+  "PINN": {
+    "hidden_layers": [
+      100,
+      100,
+      100
+    ],
+    "activation": "tanh",
+    "output": "linear",
+    "initialization": "unchanged torch.nn.Linear default",
+    "parameters": 20701,
+    "epochs": 20000,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "scheduler": "ReduceLROnPlateau(patience=200, factor=0.5)",
+    "loss": "mean(residual^2) + mean(boundary_error^2)"
+  },
+  "PIELM": {
+    "N_star": 3584,
+    "scale": 3.141592653589793,
+    "driver": "gelsd",
+    "rcond": "torch default: eps(dtype) * max(H.shape)",
+    "loss": "unweighted least squares on stacked H_f, H_b",
+    "rank": 1115
+  },
+  "device": "cpu",
+  "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+  "threads": 2,
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "torch": "2.4.1+cpu",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "matplotlib": "3.10.1",
+  "evaluation": "20 x 20 x 20 meshgrid, endpoints included",
+  "timing": "PINN loss/backward/Adam/scheduler/history; PIELM H/K construction+lstsq. Both exclude sampling, initialization, evaluation, plotting, file I/O; PINN includes progress prints.",
+  "sampling_sobol_sec": 0.019763799995416775,
+  "sampling_delaunay_sec": 0.07062220000079833,
+  "X_f_sha256": "c471ae13e3d13a7bac3f32117d8ccbe38c7d1c4a349395bd77843a19999db6a1",
+  "X_b_sha256": "b22ab86237e4473feaaa9cdbb59ec735a4ed49d654d9ce337a07765667009c2c",
+  "shared_points_verified": true,
+  "result_status": "current_canonical",
+  "metrics_columns": {
+    "N_f": "interior points",
+    "N_b": "total boundary points (all 6 faces)"
+  },
+  "actual_parameters": {
+    "dim": 3,
+    "N_f": 2048,
+    "N_b_per_face": 256,
+    "N_b_total": 1536,
+    "dtype": "torch.float32",
+    "sampling_seed": 42,
+    "boundary_seed": 43,
+    "initialization_seed": 42,
+    "interior_methods": [
+      "sobol",
+      "delaunay"
+    ],
+    "boundary_method": "sobol",
+    "PINN_epochs_per_method": 20000,
+    "PIELM_epochs": 0,
+    "PIELM_solver": "gelsd",
+    "evaluation_grid_shape": [
+      20,
+      20,
+      20
+    ]
+  }
+}

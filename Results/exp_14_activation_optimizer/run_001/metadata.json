@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "kind": "run",
+  "seed": 42,
+  "device": "cpu",
+  "threads": 2,
+  "python": "3.12.2",
+  "torch": "2.4.1+cpu",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "matplotlib": "3.10.1",
+  "problem": "smooth sine Poisson",
+  "dimension": 3,
+  "dtype": "torch.float32",
+  "N_f": 512,
+  "N_b_per_face": 64,
+  "N_b_total": 384,
+  "epochs": 3000,
+  "lr": 0.001,
+  "hidden_layers": [
+    100,
+    100,
+    100
+  ],
+  "boundary_seed": 43,
+  "evaluation_grid": [
+    20,
+    20,
+    20
+  ],
+  "scheduler": "ReduceLROnPlateau(patience=200,factor=0.5)",
+  "weight_decay_note": "1e-4 is a fixed small study setting, not a tuned optimum; Adam uses zero decay.",
+  "timing": "Training includes backward, optimizer, scheduler and history; excludes setup/evaluation/IO.",
+  "scope": "Separate 3000-epoch study; not a replacement for exp_10's 20000-epoch baseline.",
+  "X_f_sha256": "1283dd3c796576f9ada9edce2c2e1a93197d48ae11eaebaa46174f05d5a2211a",
+  "X_b_sha256": "905ce4239754fe4aa2bce5c3b563b058f49b1254e77fdda36e81a06134a1bf98",
+  "initial_state_sha256": {
+    "Adam_tanh": "7ed438009955323fe43c9be77fce02bb940ee7dafed0621762e246e064f109ae",
+    "AdamW_tanh": "7ed438009955323fe43c9be77fce02bb940ee7dafed0621762e246e064f109ae",
+    "AdamW_gelu": "7ed438009955323fe43c9be77fce02bb940ee7dafed0621762e246e064f109ae",
+    "AdamW_silu": "7ed438009955323fe43c9be77fce02bb940ee7dafed0621762e246e064f109ae"
+  },
+  "same_initial_weights": true,
+  "shared_points_verified": true,
+  "variants": [
+    {
+      "optimizer": "Adam",
+      "activation": "tanh",
+      "weight_decay": 0.0
+    },
+    {
+      "optimizer": "AdamW",
+      "activation": "tanh",
+      "weight_decay": 0.0001
+    },
+    {
+      "optimizer": "AdamW",
+      "activation": "gelu",
+      "weight_decay": 0.0001
+    },
+    {
+      "optimizer": "AdamW",
+      "activation": "silu",
+      "weight_decay": 0.0001
+    }
+  ]
+}
