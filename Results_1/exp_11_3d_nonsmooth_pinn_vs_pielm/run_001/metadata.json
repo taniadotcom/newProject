@@ -1,0 +1,66 @@
+{
+  "status": "completed",
+  "kind": "run",
+  "problem": "nonsmooth",
+  "dimension": 3,
+  "seed": 42,
+  "boundary_seed": 43,
+  "dtype": "torch.float32",
+  "device": "cpu",
+  "threads": 2,
+  "N_f": 2048,
+  "N_b_per_face": 256,
+  "N_b_total": 1536,
+  "boundary_sampling": "sobol",
+  "PINN": {
+    "hidden_layers": [
+      100,
+      100,
+      100
+    ],
+    "epochs": 20000,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "activation": "tanh",
+    "scheduler": "ReduceLROnPlateau(patience=200, factor=0.5)",
+    "loss": "mean(residual^2) + mean(boundary_error^2)"
+  },
+  "PIELM": {
+    "N_star": 3584,
+    "scale": 3.141592653589793,
+    "driver": "gelsd",
+    "rcond": "torch default",
+    "loss": "unweighted stacked least squares",
+    "rank": 1115
+  },
+  "solution": "prod(sin(pi*X)) * (1 + 8*abs(x-0.5)^3)",
+  "boundary_values": 0,
+  "regularity": "u is C2,1 but not C3; f is C0,1 but not C1 across x=0.5",
+  "X_f_sha256": "c471ae13e3d13a7bac3f32117d8ccbe38c7d1c4a349395bd77843a19999db6a1",
+  "X_b_sha256": "b22ab86237e4473feaaa9cdbb59ec735a4ed49d654d9ce337a07765667009c2c",
+  "X_d_sha256": "8f3eaa56829f10fd2d517b7277d804b97308bab489194c29775ae1dfbe1334e9",
+  "initial_state_sha256": "7ed438009955323fe43c9be77fce02bb940ee7dafed0621762e246e064f109ae",
+  "memory_plan": {
+    "H_shape": [
+      3584,
+      3584
+    ],
+    "H_MiB": 49.0,
+    "estimated_peak_extra_MiB": 260.0,
+    "available_MiB": 808.890625,
+    "safe": true,
+    "estimate_note": "Block construction: 4*H + 64 MiB reserve. Heuristic, not a measured peak. Keep 25% of free RAM unused."
+  },
+  "sampling_sobol_sec": 0.018908600002760068,
+  "sampling_delaunay_sec": 0.06989939999766648,
+  "evaluation": "20 x 20 x 20 meshgrid, endpoints included; same order as exp_10",
+  "timing": "PINN training incl. scheduler/history; PIELM H/K construction and lstsq. Excludes sampling, evaluation and IO.",
+  "python": "3.12.2",
+  "torch": "2.4.1+cpu",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "matplotlib": "3.10.1",
+  "delaunay_initial_state_sha256": "7ed438009955323fe43c9be77fce02bb940ee7dafed0621762e246e064f109ae",
+  "shared_points_verified": true,
+  "same_initial_weights_verified": true
+}

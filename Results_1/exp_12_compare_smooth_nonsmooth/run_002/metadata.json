@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "kind": "run",
+  "sources": {
+    "smooth": "Results/exp_10_3d_pinn_vs_pielm/run_002",
+    "nonsmooth": "Results/exp_11_3d_nonsmooth_pinn_vs_pielm/run_001"
+  }
+}

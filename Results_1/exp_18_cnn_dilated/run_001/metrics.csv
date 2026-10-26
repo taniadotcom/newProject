@@ -1,0 +1,2 @@
+method,architecture,relative_L2,global_relative_L2,test_MSE,time_sec,inference_time_sec,inference_per_sample_sec,epochs,n_test,best_epoch,best_validation_MSE
+CNN,dilated,0.08162010865050039,0.08394755071810434,0.006151890382170677,62.646972200018354,0.05708050000248477,0.0008918828125388245,100,64,87,0.00631524296477437
