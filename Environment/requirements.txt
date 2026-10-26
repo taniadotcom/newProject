@@ -1,7 +1,0 @@
-# -*- coding: utf-8 -*-
-# Άμεσες runtime εξαρτήσεις του ολοκληρωμένου CPU benchmark, Python 3.12
---extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.4.1+cpu
-numpy==2.4.4
-scipy==1.17.1
-matplotlib==3.10.1
